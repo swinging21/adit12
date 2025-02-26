@@ -278,51 +278,6 @@
 </head>
 <body>
 
-<h2>Pemesanan Produk</h2>
-<form id="orderForm">
-    <label for="name">Nama:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="address">Alamat:</label>
-    <input type="text" id="address" name="address" required>
-
-    <label for="product">Produk:</label>
-    <select id="product" name="product" required>
-        <option value="Produk A">wingman denim ZERO-ZEKE 22 oz </option>
-        <option value="Produk B">work jacket corduroy</option>
-        <option value="Produk C">sage origin series Darkspire 14oz Sanforized Extra Deep Indigo Selvedge</option>
-        <option value="Produk B">Sage Craftworks : Bearer Belt Tan</option>
-        <option value="Produk B">ENZO | TYPE III JACKET</option>
-        <option value="Produk B">LUXE PURPLE 17oz</option>
-        <option value="Produk B">Work jacket vintage 90s Carhartt Detroit Blanket Lined</option>
-        <option value="Produk B">Sage Denim Refresher: Candy Blast</option>
-    </select>
-
-    <label for="quantity">Jumlah:</label>
-    <input type="number" id="quantity" name="quantity" min="1" required>
-
-    <button type="submit">Pesan</button>
-</form>
-
-<div id="confirmation" style="display:none; margin-top:20px;">
-    <h3>Pesanan Anda:</h3>
-    <p id="orderDetails"></p>
-</div>
-
-<script>
-    document.getElementById('orderForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Mencegah form dari pengiriman default
-
-        // Mengambil data dari form
-        const name = document.getElementById('name').value;
-        const address = document.getElementById('address').value;
-        const product = document.getElementById('product').value;
-        const quantity = document.getElementById('quantity').value;
-
-        // Menampilkan konfirmasi pesanan
-        const orderDetails = `Nama: ${name}<br>Alamat: ${address}<br>Produk: ${product}<br>Jumlah: ${quantity}`;
-        document.getElementById('orderDetails').innerHTML = orderDetails;
-        document.getElementById('confirmation').style.display = 'block';
 
                    // Membuat pesan untuk WhatsApp
         const message = `*Pesanan Baru*\nNama: ${name}\nAlamat: ${address}\nProduk: ${product}\nJumlah: ${quantity}`;
